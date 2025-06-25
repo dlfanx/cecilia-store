@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+:root {
+    --accent: #698ae8;
+    --bg: 	#f8f9fe;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--bg);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/** Top Menu **/
+.navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.title {
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: block;
+    margin-right: 5px;
+    transition: .2s;
+}
+
+.menu-icon:hover {
+    width: 30px;
+}
+
+#menuList {
+    animation: fadeInGirl .5s linear;
+    background-color: transparent;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: var(--accent);
+    padding: 10px;
+    border-radius: 60px;
+}
+
+/**Content**/
+.content {
+    display: flex;
+    top: 54%;
+    height: 80%;
+    background-color: transparent;
+    transform: translateY(-50%);
+    align-items: center;
+    position: absolute;
+}
+
+.heading {
+    text-align: left;
+    width: 100%;
+    margin-left: 60px;
+    background-color: transparent;
+    position: relative;
+}
+
+.heading h2 {
+    animation: fadeIn .5s linear;
+    background-color: transparent;
+    font-size: 64px;
+}
+
+.heading h3 {
+    animation: fadeIn .5s linear;
+    background-color: transparent;
+    margin-top: -5px;
+    font-size: 48px;
+}
+
+.heading p {
+    animation: fadeInP .5s linear;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: 5.0px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        margin-left: -50px;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+@keyframes fadeInP {
+    0% {
+        opacity: 0;
+        margin-left: 50px;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+.social {
+    justify-content: left;
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+    min-height: 110px;
+    display: flex;
+}
+
+.social img {
+    animation: fadeInImg .5s linear;
+    background-color: transparent;
+    width: 50px;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+.social img:hover {
+    margin-bottom: 25px;
+}
+
+@keyframes fadeInImg {
+    0% {
+        opacity: 0;
+        margin-left: 50px;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+.body {
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.girl {
+
+    animation: fadeInGirl .5s linear;
+    justify-content: end;
+    display: block;
+    cursor: pointer;
+    width: 135%;
+    transition: .2s;
+}
+
+.girl:hover {
+    width: 140%;
+}
+
+@keyframes fadeInGirl {
+    0% {
+        opacity: 0;
+        margin-right: -30px;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}
+
+/**Mobile**/
+@media only screen and (max-width:700px) {
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 0px;
+        padding-right: 0px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 65px;
+        transition: .5s;
+        z-index: 2;
+        right: 0;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    /**Content**/
+    .content {
+        display: flex;
+        width: 100%;
+        top: 40%;
+        transform: translateY(-30%);
+        align-items: center;
+        position: absolute;
+    }
+
+    .heading {
+        right: 0px;
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .heading h2 {
+        animation: fadeIn .5s linear;
+        font-size: 42px;
+    }
+
+    .heading h3 {
+        animation: fadeIn .5s linear;
+        margin-top: -5px;
+        font-size: 36px;
+    }
+
+    .heading p {
+        display: inline-block;
+        text-align: center;
+        animation: fadeInP .5s linear;
+        font-size: 16px;
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .social {
+        justify-content: center;
+        flex: 1;
+        align-items: center;
+        min-height: 110px;
+        display: flex;
+    }
+
+    .social img {
+        animation: fadeInImg .5s linear;
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: 0.2s;
+    }
+
+    @keyframes fadeInImg {
+        0% {
+            opacity: 0;
+            margin-left: 30px;
+            margin-right: 30px;
+            background-color: transparent;
+        }
+
+        100% {
+            opacity: 1;
+            background-color: transparent;
+        }
+    }
+
+    .body {
+        display: flex;
+        justify-content: end;
+        margin-right: 0px;
+    }
+
+    .girl {
+        flex: 1;
+        justify-content: end;
+        display: none;
+        width: 0%;
+    }
+
+    #menuList {
+        animation: fadeInGirl .2s linear;
+        background-color: transparent;
+        overflow: hidden;
+    }
+}
+
+
+/**Tablet**/
+@media (min-width:641px) {
+
+    /* CSS */
+    .heading {
+        right: 3px;
+        width: 100%;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .heading h2 {
+        animation: fadeIn .5s linear;
+        font-size: 46px;
+    }
+
+    .heading h3 {
+        animation: fadeIn .5s linear;
+        margin-top: -5px;
+        font-size: 40px;
+    }
+
+    .heading p {
+        animation: fadeInP .5s linear;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .girl {
+
+        animation: fadeInGirl .5s linear;
+        justify-content: end;
+        display: block;
+        cursor: pointer;
+        width: 95%;
+        transition: .2s;
+    }
+
+    .girl:hover {
+        width: 100%;
+    }
+}
+
+/**Desktop**/
+@media (min-width:1281px) {
+
+    /* CSS */
+    .heading {
+        right: 3px;
+        width: 100%;
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .heading h2 {
+        animation: fadeIn .5s linear;
+        font-size: 46px;
+    }
+
+    .heading h3 {
+        animation: fadeIn .5s linear;
+        margin-top: -5px;
+        font-size: 40px;
+    }
+
+    .heading p {
+        animation: fadeInP .5s linear;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .girl {
+
+        animation: fadeInGirl .5s linear;
+        justify-content: end;
+        display: block;
+        cursor: pointer;
+        width: 135%;
+        transition: .2s;
+    }
+
+    .girl:hover {
+        width: 140%;
+    }
+}
